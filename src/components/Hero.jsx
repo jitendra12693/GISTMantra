@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
 
       {/* Redesigned EPC cycle diagram */}
-      <svg className="epc-diagram" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <svg className="epc-diagram" viewBox="-90 -20 580 440" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
             <path d="M0,0 L8,4 L0,8 Z" fill="var(--blue)" />
@@ -50,13 +50,13 @@ export default function Hero() {
         <text x="200" y="220" textAnchor="middle" fontFamily="IBM Plex Sans" fontSize="12" fill="var(--text-muted)">Mantra Cycle</text>
 
         <circle cx="323.74" cy="76.26" r="4" fill="var(--blue)" />
-        <text x="332" y="72" fontFamily="Space Grotesk" fontSize="14" fontWeight="600" fill="var(--navy)">Engineering</text>
+        <text x="335" y="72" fontFamily="Space Grotesk" fontSize="14" fontWeight="600" fill="var(--navy)">Engineering</text>
 
         <circle cx="245.29" cy="369.04" r="4" fill="var(--orange)" />
         <text x="245.29" y="392" textAnchor="middle" fontFamily="Space Grotesk" fontSize="14" fontWeight="600" fill="var(--navy)">Procurement</text>
 
         <circle cx="30.96" cy="154.71" r="4" fill="var(--teal)" />
-        <text x="24" y="150" textAnchor="end" fontFamily="Space Grotesk" fontSize="14" fontWeight="600" fill="var(--navy)">Construction</text>
+        <text x="16" y="150" textAnchor="end" fontFamily="Space Grotesk" fontSize="14" fontWeight="600" fill="var(--navy)">Construction</text>
       </svg>
     </section>
   );
