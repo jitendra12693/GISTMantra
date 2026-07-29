@@ -599,3 +599,44 @@
 .mobile-only-brand {
   display: none;
 }
+
+/* ===== MAP ===== */
+.map-wrap {
+  width: 100%;
+  min-height: 350px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 800px) {
+  .map-wrap { min-height: 280px; }
+}
+
+
+/* ===== DEV CREDIT ===== */
+.dev-credit {
+  font-size: 0.85rem;
+  color: rgba(247, 245, 240, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dev-badge {
+  background: var(--teal);
+  color: white;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.dev-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: rgba(247, 245, 240, 0.9);
+  letter-spacing: 0.3px;
+}
