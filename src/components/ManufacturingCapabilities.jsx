@@ -1,55 +1,25 @@
-const stats = [
-  { num: "30+", label: "Years Experience" },
-  { num: "06", label: "Industry Sectors" },
-  { num: "100%", label: "Quality Assurance" },
-];
-
-const cards = [
-  {
-    color: "var(--teal)",
-    title: "High-Quality Equipment",
-    intro: "Manufacturing and supply premium equipment, valves, instruments, and electrical components.",
-    points: ["Precision-engineered machinery for industrial applications", "Reliable valves and instrumentation systems", "Advanced electrical and automation solutions"],
-  },
-  {
-    color: "var(--blue)",
-    title: "EPC Services",
-    intro: "Complete engineering, procurement, and construction services for turnkey industrial projects.",
-    points: ["Project management and engineering design", "Equipment procurement and supply chain", "Installation and commissioning services"],
-  },
-  {
-    color: "var(--orange)",
-    title: "Consultancy Expertise",
-    intro: "Specialized consulting services with proven track record in industrial project development.",
-    points: ["Process optimization and technical consulting", "Feasibility studies and project planning", "Ongoing technical support and training"],
-  },
+const industries = [
+  { num: "01", title: "Sugar & Refinery", desc: "Juice heating, syrup concentration, condensate recovery and refinery duties." },
+  { num: "02", title: "Distillery & Ethanol", desc: "Reboilers, evaporators, condensers, heat integration and spent-wash concentration." },
+  { num: "03", title: "Pulp & Paper", desc: "Black liquor evaporation, white-water heat recovery and energy optimisation." },
+  { num: "04", title: "Chemical & Solvents", desc: "Special metallurgy and thermal systems for methanol, ethanol, acetone and other services." },
+  { num: "05", title: "Food & Beverage", desc: "Hygienic heating, cooling, concentration and product-sensitive thermal processing." },
+  { num: "06", title: "Wastewater & ZLD", desc: "Evaporation, pre-concentration, condensate recovery and utility optimisation." },
 ];
 
 export default function ManufacturingCapabilities() {
   return (
-    <section id="manufacturing">
-      <div className="section-eyebrow" style={{ color: "var(--blue)" }}>What Sets Us Apart</div>
-      <h2 className="section-title">Our Manufacturing & Supply Capabilities</h2>
+    <section id="industries">
+      <div className="section-eyebrow" style={{ color: "var(--orange)" }}>Industries We Support</div>
+      <h2 className="section-title">Built around your process realities.</h2>
+      <p className="section-intro">Every industry has different fouling, corrosion, pressure, temperature, product-quality and cleaning requirements.</p>
 
-      <div className="stats-bar">
-        {stats.map((s) => (
-          <div className="stat-box" key={s.label}>
-            <div className="stat-num">{s.num}</div>
-            <div className="stat-label">{s.label}</div>
-          </div>
-        ))}
-      </div>
-
-      <div className="card-grid">
-        {cards.map((c) => (
-          <div className="info-card" key={c.title} style={{ "--card-color": c.color }}>
-            <h3>{c.title}</h3>
-            <p style={{ marginBottom: "12px" }}>{c.intro}</p>
-            <ul style={{ paddingLeft: "18px", color: "var(--text-muted)", fontSize: "0.92rem" }}>
-              {c.points.map((pt) => (
-                <li key={pt} style={{ marginBottom: "8px" }}>{pt}</li>
-              ))}
-            </ul>
+      <div className="solutions-grid">
+        {industries.map((ind) => (
+          <div className="info-card numbered-card" key={ind.num} style={{ "--card-color": "var(--orange)" }}>
+            <span className="card-number">{ind.num}</span>
+            <h3>{ind.title}</h3>
+            <p>{ind.desc}</p>
           </div>
         ))}
       </div>

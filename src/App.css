@@ -640,3 +640,174 @@
   color: rgba(247, 245, 240, 0.9);
   letter-spacing: 0.3px;
 }
+
+
+/* ===== HERO CHIPS ===== */
+.hero-chips {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.hero-chip {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-left: 2px solid var(--teal);
+  padding-left: 10px;
+}
+
+.hero-chip strong {
+  display: block;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}
+
+/* ===== INDUSTRY PILLS ===== */
+.industry-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.industry-pill {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.03em;
+}
+
+/* ===== SOLUTIONS / INDUSTRIES GRID (numbered cards) ===== */
+/* ===== SOLUTIONS / INDUSTRIES GRID (numbered cards) ===== */
+.solutions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+}
+
+.solutions-grid .info-card {
+  flex: 1 1 300px;
+  max-width: 340px;
+}
+
+@media (max-width: 900px) {
+  .solutions-grid .info-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.numbered-card {
+  position: relative;
+  padding-top: 44px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.numbered-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(15, 42, 63, 0.1);
+}
+
+.card-number {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--border);
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+/* ===== BRAND STATEMENT BANNER ===== */
+.brand-statement {
+  background: var(--navy);
+  text-align: center;
+  padding: 70px 8%;
+}
+
+.brand-statement h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 700;
+  color: rgba(247,245,240,0.15);
+  letter-spacing: 0.05em;
+  margin-bottom: 28px;
+}
+
+.brand-statement h2 span { color: rgba(247,245,240,0.3); }
+
+.brand-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.brand-tag {
+  border: 1px solid rgba(247,245,240,0.25);
+  color: rgba(247,245,240,0.8);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 30px;
+}
+
+/* ===== HOW WE WORK STEPS ===== */
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .steps-row { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .steps-row { grid-template-columns: 1fr; }
+}
+
+.step-box {
+  position: relative;
+}
+
+.step-num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--teal);
+  border: 2px solid var(--teal);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.step-box h3 {
+  font-family: var(--font-display);
+  color: var(--navy);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.step-box p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}

@@ -1,32 +1,30 @@
-const markets = [
-  {
-    color: "var(--teal)",
-    title: "African Market Focus",
-    points: ["Strong relationships with procurement agencies across Africa", "Experience in sugar, power, and chemical industries", "Understanding of local requirements and standards"],
-  },
-  {
-    color: "var(--orange)",
-    title: "Indonesia & Global Reach",
-    points: ["Established connections in Southeast Asian markets", "Worldwide procurement and supply capabilities", "Efficient logistics and delivery networks"],
-  },
-];
+
+const industryTags = ["Sugar", "Distillery", "Pulp & Paper", "Chemical", "Food & Beverage"];
 
 export default function GlobalFocus() {
   return (
-    <section id="global-focus" className="about-section">
-      <div className="section-eyebrow" style={{ color: "var(--orange)" }}>Our Reach</div>
-      <h2 className="section-title">Our Global Focus & Target Markets</h2>
+    <section id="industry-intro">
+      <div className="section-eyebrow" style={{ color: "var(--teal)" }}>From Process Review to Performance</div>
+      <h2 className="section-title">Sugar & Process Industry Solutions</h2>
+      <p className="section-intro">Heat Transfer • Evaporation • Energy Recovery</p>
 
-      <div className="card-grid grid-2col">
-        {markets.map((m) => (
-          <div className="info-card" key={m.title} style={{ "--card-color": m.color }}>
-            <h3>{m.title}</h3>
-            <ul style={{ paddingLeft: "18px", fontSize: "0.92rem" }}>
-              {m.points.map((pt) => (
-                <li key={pt} style={{ marginBottom: "8px" }}>{pt}</li>
-              ))}
-            </ul>
-          </div>
+      <div className="card-grid grid-2col" style={{ marginBottom: "44px" }}>
+        <div className="info-card" style={{ "--card-color": "var(--teal)" }}>
+          <h3>Process Focus</h3>
+          <p>Lower Steam & Water Use</p>
+        </div>
+        <div className="info-card" style={{ "--card-color": "var(--blue)" }}>
+          <h3>Engineering</h3>
+          <p>Application-Specific Design</p>
+        </div>
+      </div>
+
+      <h3 style={{ fontFamily: "var(--font-display)", color: "var(--navy)", marginBottom: "18px" }}>
+        Serving Process Industries
+      </h3>
+      <div className="industry-pills">
+        {industryTags.map((tag) => (
+          <span className="industry-pill" key={tag}>{tag}</span>
         ))}
       </div>
     </section>
