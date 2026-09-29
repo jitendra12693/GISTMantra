@@ -1,25 +1,28 @@
-import Navbar from "./components/Navbar";
+import useReveal from "./hooks/useReveal";
+import Header from "./components/Header";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Capabilities from "./components/Capabilities";
-import ManufacturingCapabilities from "./components/ManufacturingCapabilities";
-import GlobalFocus from "./components/GlobalFocus";
-import WhyPartner from "./components/WhyPartner";
+import Intro from "./components/Intro";
+import Solutions from "./components/Solutions";
+import Industries from "./components/Industries";
+import Advantages from "./components/Advantages";
+import Process from "./components/Process";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import "./App.css";
 
 export default function App() {
+  useReveal();
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Capabilities />
-      <ManufacturingCapabilities />
-      <GlobalFocus />
-      <WhyPartner />
-      <Contact />
+      <Header />
+      <main>
+        <Hero />
+        <Intro />
+        <Solutions />
+        <Industries />
+        <Advantages />
+        <Process />
+        <Contact />
+      </main>
       <Footer />
     </>
   );
