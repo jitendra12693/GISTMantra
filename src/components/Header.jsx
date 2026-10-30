@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../assets/gist-mantra-logo.jpg";
+import logo from "../assets/newlogo.png";
 
 const links = [
   { href: "#solutions", label: "Solutions" },
@@ -15,6 +15,7 @@ export default function Header() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
+
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -24,25 +25,53 @@ export default function Header() {
   return (
     <header className={`site-header${scrolled ? " scrolled" : ""}`} id="top">
       <div className="container nav-wrap">
+
+        {/* Logo and Company Branding */}
         <a href="#top" className="brand" aria-label="Gist Mantra home">
-          <img className="brand-logo" src={logo} alt="Gist Mantra logo" />
+          <img
+            className="brand-logo"
+            src={logo}
+            alt="Gist Mantra logo"
+          />
+
+          <div className="brand-content">
+            <h1 className="brand-title">
+              <span>GIST</span> <strong>Mantra</strong>
+            </h1>
+            <p className="brand-motto">
+              CREATE <span>•</span> CONNECT <span>•</span> GROW
+            </p>
+          </div>
         </a>
 
+        {/* Mobile Menu Button */}
         <button
           className="menu-toggle"
           aria-label="Open navigation"
           aria-expanded={open}
           onClick={() => setOpen(!open)}
         >
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
-        <nav className={`main-nav${open ? " open" : ""}`} aria-label="Primary navigation">
+        {/* Navigation */}
+        <nav
+          className={`main-nav${open ? " open" : ""}`}
+          aria-label="Primary navigation"
+        >
           {links.map((l) => (
-            <a key={l.href} href={l.href} onClick={close}>{l.label}</a>
+            <a key={l.href} href={l.href} onClick={close}>
+              {l.label}
+            </a>
           ))}
-          <a href="#contact" className="nav-cta" onClick={close}>Discuss a Project</a>
+
+          <a href="#contact" className="nav-cta" onClick={close}>
+            Discuss a Project
+          </a>
         </nav>
+
       </div>
     </header>
   );

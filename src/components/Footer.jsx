@@ -1,15 +1,33 @@
-import logo from "../assets/gist-mantra-logo.jpg";
+import logo from "../assets/newlogo.png";
 
 export default function Footer() {
   return (
     <footer>
       <div className="container footer-grid">
         <div>
-          <a href="#top" className="brand footer-brand">
-            <img className="brand-logo footer-logo" src={logo} alt="Gist Mantra logo" />
+          <a href="#top" className="brand footer-brand" aria-label="GIST Mantra home">
+            <img
+              className="brand-logo footer-logo"
+              src={logo}
+              alt="GIST Mantra Symbol"
+            />
+
+            <div className="brand-content">
+              <h3 className="brand-title">
+                <span>GIST</span> <strong>Mantra</strong>
+              </h3>
+
+              <p className="brand-motto">
+                CREATE <span>•</span> CONNECT <span>•</span> GROW
+              </p>
+            </div>
           </a>
-          <p>Advanced heat transfer, evaporation and process engineering solutions.</p>
+
+          <p>
+            Advanced heat transfer, evaporation and process engineering solutions.
+          </p>
         </div>
+
         <div>
           <h4>Solutions</h4>
           <a href="#solutions">Evaporators</a>
@@ -17,6 +35,7 @@ export default function Footer() {
           <a href="#solutions">Reboilers</a>
           <a href="#solutions">Process Skids</a>
         </div>
+
         <div>
           <h4>Industries</h4>
           <a href="#industries">Sugar</a>
@@ -24,6 +43,7 @@ export default function Footer() {
           <a href="#industries">Paper</a>
           <a href="#industries">Chemical</a>
         </div>
+
         <div>
           <h4>Company</h4>
           <a href="#about">About</a>
@@ -31,10 +51,15 @@ export default function Footer() {
           <a href="#contact">Contact</a>
         </div>
       </div>
+
       <div className="container footer-bottom">
-        <span>© {new Date().getFullYear()} Gist Mantra Private Limited. All rights reserved.</span>
-        
-        <span className="dev-credit">Developed by <b>JD Softteck</b></span>
+        <span>
+          © {new Date().getFullYear()} Gist Mantra Private Limited. All rights reserved.
+        </span>
+
+        <span className="dev-credit">
+          Developed by <b>JD Softteck</b>
+        </span>
       </div>
     </footer>
   );
