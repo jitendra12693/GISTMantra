@@ -1,3 +1,4 @@
+
 export default function Contact() {
   return (
     <section className="cta-section" id="contact">
@@ -58,12 +59,21 @@ export default function Contact() {
 
               <div>
                 <strong>Office Location</strong>
+
+                <p className="office-address">
+                  Work Flo Icon Tower<br />
+                  Office No. 702, Sr No. 114/5, 115/1, 114/6/3,<br />
+                  Baner Gaon, Haveli,<br />
+                  Pune 411045, Maharashtra
+                </p>
+
                 <a
+                  className="office-map-link"
                   href="https://maps.app.goo.gl/zKrQAUa4NxjUx5Gy6"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View Office Location on Google Maps
+                  View on Google Maps ↗
                 </a>
               </div>
             </div>
@@ -72,22 +82,20 @@ export default function Contact() {
         </div>
 
         {/* Google Maps */}
-       <div className="contact-map">
-  <iframe
-    title="GIST Mantra Office Location"
-    src="https://www.google.com/maps?q=18.5653077,73.7741569&z=17&output=embed"
-    width="100%"
-    height="400"
-    style={{ border: 0, display: "block" }}
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-    allowFullScreen
-  ></iframe>
-</div>
+        <div className="contact-map">
+          <iframe
+            title="GIST Mantra Office Location"
+            src="https://www.google.com/maps?q=18.5653077,73.7741569&z=17&output=embed"
+            width="100%"
+            height="520"
+            style={{ border: 0, display: "block" }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          ></iframe>
+        </div>
 
       </div>
     </section>
   );
 }
-
-

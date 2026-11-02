@@ -331,3 +331,18 @@
     min-height: 380px;
   }
 }
+
+.office-address {
+  margin: 6px 0 8px;
+  line-height: 1.7;
+  font-size: 14px;
+  color: inherit;
+}
+
+.office-map-link {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 3px;
+  text-decoration: underline;
+}
